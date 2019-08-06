@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="canvas1" style="width: 500px;height: 900px;"></div>
+<script type="text/javascript" src="./../dist/WThree.bundle.js"></script>
+<script type="text/javascript">
+var WThree1 = new WThree('canvas1', {}, {
+    objects: [
+        {
+            show: true,
+            uuid: '',
+            name: 'floor',
+            objType: 'cube',
+            length: 4000,
+            width: 3600,
+            height: 10,
+            rotation: [{direction: 'x', degree: 0}], // 旋转 表示x方向0度  arb表示任意参数值[x,y,z,angle]
+            style: {
+                skinColor: 0x8ac9e2,
+                skin: {
+                    opacity: 1,
+                    skin_up: {
+                        skinColor: 0x98750f,
+                        imgurl: './static/images/floor.jpg',
+                        repeatx: true,
+                        repeaty: true,
+                        width: 128,
+                        height: 128
+                    }
+                }
+            }
+        }
+    ]
+})
+console.log(WThree1)
+WThree1.start()
+var buildingArr = [
+    {
+        name: 'building1',
+        // 楼房定位起始位置
+        position: {
+            x: 500, // 起始位置x轴
+            z: 350 // 起始位置z轴
+        },
+        length: 800, // 楼房长度
+        height: 180, // 楼房高度
+        width: 200, // 楼房宽度
+        wall1: {
+            glassRow: 2,
+            glassColumn: 5
+        }
+    },
+    {
+        name: 'building2',
+        // 楼房定位起始位置
+        position: {
+            x: -500, // 起始位置x轴
+            z: -350 // 起始位置z轴
+        },
+        length: 700, // 楼房长度
+        height: 240, // 楼房高度
+        width: 100, // 楼房宽度
+        wall1: {
+            glassRow: 3,
+            glassColumn: 4
+        }
+    },
+    {
+        name: 'building3',
+        // 楼房定位起始位置
+        position: {
+            x: -500, // 起始位置x轴
+            z: 150 // 起始位置z轴
+        },
+        length: 1000, // 楼房长度
+        height: 240, // 楼房高度
+        width: 160, // 楼房宽度
+        wall1: {
+            glassRow: 3,
+            glassColumn: 10
+        }
+    },
+    {
+        name: 'building4',
+        // 楼房定位起始位置
+        position: {
+            x: -100, // 起始位置x轴
+            z: -550 // 起始位置z轴
+        },
+        length: 1000, // 楼房长度
+        height: 240, // 楼房高度
+        width: 160, // 楼房宽度
+        wall1: {
+            glassRow: 3,
+            glassColumn: 10
+        }
+    },
+    {
+        name: 'building5',
+        // 楼房定位起始位置
+        position: {
+            x: -50, // 起始位置x轴
+            z: -150 // 起始位置z轴
+        },
+        length: 800, // 楼房长度
+        height: 240, // 楼房高度
+        width: 160, // 楼房宽度
+        wall1: {
+            glassRow: 2,
+            glassColumn: 7
+        }
+    }
+]
+// var building1 = {
+//     name: 'building1',
+//     // 楼房定位起始位置
+//     position: {
+//         x: -500, // 起始位置x轴
+//         z: -350 // 起始位置z轴
+//     },
+//     length: 800, // 楼房长度
+//     height: 180, // 楼房高度
+//     width: 200, // 楼房宽度
+//     wall1: {
+//         glassRow: 2,
+//         glassColumn: 5
+//     }
+// }
+for (var i = 0; i < buildingArr.length; i++) {
+    WThree1.initBuilding(buildingArr[i])
+}
+// WThree1.initBuilding(t)
+// console.log(WThree1.createBuilding())
+// WThree1.createBuilding()
+// WThree1.scene.add(building1)
+</script>
+</body>
+</html>

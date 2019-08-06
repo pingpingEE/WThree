@@ -1,0 +1,37 @@
+{
+  "name": "wthree",
+  "version": "1.0.0",
+  "description": "第一版本依据three进行的二次开发，包含内容主要为3d机房、设备拓扑展示",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zhangyp",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pingpingEE/WThree.git"
+  },
+  "peerDependencies": {
+    "@tweenjs/tween.js": "^17.4.0",
+    "three": "^0.106.2",
+    "three-orbitcontrols": "^2.102.2",
+    "threebsp": "^1.0.4"
+  },
+  "devDependencies": {
+    "@tweenjs/tween.js": "^17.4.0",
+    "three": "^0.106.2",
+    "three-orbitcontrols": "^2.102.2",
+    "threebsp": "^1.0.4",
+    "webpack-cli": "^3.3.6"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-es2015": "^6.24.1",
+    "imports-loader": "^0.8.0",
+    "module": "^1.2.5",
+    "path": "^0.12.7",
+    "webpack": "^4.37.0"
+  }
+}
